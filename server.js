@@ -4,11 +4,13 @@ const cors = require('cors');
 
 const PORT = process.env.PORT || 8080;
 
+const host = '0.0.0.0';
+
 app.get('/', (req, res) => {
 	res.send('HELLO THERE');
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, host, () => {
 	console.log(`Server is running at http://localhost:${PORT}`);
 });
 
